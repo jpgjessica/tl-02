@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script type="module" src="../js/main.js" defer></script>
+    <link rel="icon" type="image/x-icon" href="../img/logo/logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sol | Lunettes de soleil</title>
+</head>
+
+<body class="w-full min-h-screen">
+    <header class="bg-summer-light">
+        <div class="flex flex-row items-center justify-center p-6">
+            <img class="w-auto h-20" src="/assets/img/logo/logo.png" alt="Logo Sol">
+            <h1 class="font-heading text-5xl text-summer-accentPlus cursor-pointer">
+                <a href="/index.html">Sol</a>
+            </h1>
+        </div>
+        <div class="w-auto flex justify-between items-center p-4 bg-white">
+            <span class="menu-mobile-btn material-symbols-outlined text-black cursor-pointer md:hidden">menu</span>
+            <div class="hidden md:block">
+                <div class="flex items-center p-4">
+                    <span class="material-symbols-outlined text-black">location_on</span>
+                    <form class="flex-1">
+                        <input type="text" placeholder="Code postale"
+                            class="input-search text-sm w-full p-2 border-b-2 border-summer-accentPlus focus:border-black focus:outline-none focus:ring-0 bg-transparent" />
+                    </form>
+                </div>
+            </div>
+            <nav class="hidden md:flex">
+                <ul class="flex gap-x-12">
+                    <li class="text-black hover:text-summer-muted hover:font-semibold cursor-pointer"><a
+                            href="/index.html">Home</a></li>
+                    <li class="text-black hover:text-summer-muted hover:font-semibold cursor-pointer"><a
+                            href="/assets/pages/_apropos.html">À propos</a></li>
+                    <li class="text-black hover:text-summer-muted hover:font-semibold cursor-pointer"><a
+                            href="/assets/pages/_products.html">Produits</a></li>
+                    <li class="text-black hover:text-summer-muted hover:font-semibold cursor-pointer"><a
+                            href="/assets/pages/_contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="flex px-4">
+                <span
+                    class="material-symbols-outlined text-black cursor-pointer transition-transform transform hover:scale-110">shopping_bag</span>
+            </div>
+            <div
+                class="mobile-menu fixed bg-summer-light inset-y-0 left-0 w-full p-4 md:hidden hidden transition-transform transform -translate-x-full">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="font-heading text-3xl text-summer-accentPlus font-bold">menu</h2>
+                    <span class="close-menu material-symbols-outlined text-4xl text-black cursor-pointer">close</span>
+                </div>
+                <nav class="block md:hidden">
+                    <ul class="flex flex-col gap-4">
+                        <li class="text-black hover:text-summer-muted hover:font-semibold cursor-pointer"><a
+                                href="/index.html">Home</a></li>
+                        <li class="text-black hover:text-summer-muted hover:font-semibold cursor-pointer"><a
+                                href="/assets/pages/_apropos.html">À propos</a></li>
+                        <li class="text-black hover:text-summer-muted hover:font-semibold cursor-pointer"><a
+                                href="/assets/pages/_products.html">Produits</a></li>
+                        <li class="text-black hover:text-summer-muted hover:font-semibold cursor-pointer"><a
+                                href="/assets/pages/_contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="flex flex-col justify-center items-center">
+            <h3 class="text-xl font-semibold mb-2 ml-6 text-black">Difficultés et comment je les ai surmontées</h3>
+            <div class="bg-white m-6 max-w-3xl shadow-lg p-5">
+                <ul class="text-sm">
+                    <li class="font-bold pb-2 pt-2">Problèmes avec le SRC des images :
+                    </li>
+                    <p>J'ai eu des problèmes avec le SRC des images lors de l'instantiation de ma classe.
+                        Je n'ai pas pu utiliser le meme path pour les Bestsellers de la page d'accueil et les Produits
+                        de la page des produits. J'ai compris que c'était parce qu'ils sont des fichiers séparés
+                        présents sur
+                        différents niveaux de dossiers. J'ai créé le dossier "Pages" pour que ce soit plus ordonné,
+                        alors j'ai décidé de le
+                        garder, mais pour résoudre mon problème, j'avais ajouté un deuxième path pour les images dans
+                        mon constructeur.
+                    </p>
+                    <p>
+                        J'ai continué a avoir de problèmes lors du déploiement sur Vercel.
+                        Cette problématique a été résolue quand j'ai changé le code pour utiliser les imports au lieu du
+                        path
+                        pour chaque image.
+                    </p>
+                    <li class="font-bold pb-2 pt-2">Ajout du paramètre isBestSellerProduct :
+
+                    </li>
+                    <p>J'ai dû ajouter le paramètre isBestSellerProduct dans mon constructor pour pouvoir sélectionner
+                        seulement les quatre produits souhaités pour l'affichage sur la page d'accueil.
+                    </p>
+                    <li class="font-bold pb-2 pt-2">Maintien du footer en bas de page :
+
+                    </li>
+                    <p>J'ai eu un peu de mal à maintenir le footer en bas de la page.
+                        J'ai trouvé une solution sur Stack Overflow :
+                    </p>
+                    <a class="text-blue-700"
+                        href="https://stackoverflow.com/questions/59812003/tailwindcss-fixed-sticky-footer-on-the-bottom">Sticky
+                        footer
+                    </a>
+                    <li class="font-bold pb-2 pt-2">Création de modales avec overlay en Tailwind :
+
+                    </li>
+                    <p>J'ai eu des difficultés pour créer des modales avec overlay en utilisant Tailwind CSS.
+                        J'ai trouvé un article intéressant :
+                    </p>
+                    <a class="text-blue-700"
+                        href="https://codeburst.io/creating-a-modal-dialog-with-tailwind-css-42722c9aea4f">Modal
+                        dialogue Tailwind
+                    </a>
+                    <li class="font-bold pb-2 pt-2">Problème avec la bannière sur mobile :
+                    </li>
+                    <p>Sur la page d'accueil en mobile, la bannière apparaissait tout le temps sous le menu lors de son
+                        activation.
+                        J'ai dû utiliser -z-50 pour maintenir l'image à l'arrière.
+                    </p>
+                    <li class="font-bold pb-2 pt-2">Messages d'erreur/succès et validation des formulaires :
+                    </li>
+                    <p>Pour afficher des messages d'erreur et de succès dans les formulaires, j'ai utilisé la méthode
+                        alert
+                        en JavaScript.
+                        Cette méthode crée une boîte de dialogue directement sur le navigateur demandant à l'utilisateur
+                        d'appuyer sur "OK" pour se fermer.
+                    </p>
+                    <li class="font-bold pb-2 pt-2">Validation des adresses e-mail en JavaScript :
+                    </li>
+                    <p>J'ai rencontré des difficultés avec la validation des formulaires en JavaScript.
+                        Pour la validation des courriels spécifiquement, j'ai trouvé des posts intéressants sur Stack
+                        Overflow:
+                    </p>
+                    <a class="text-blue-700"
+                        href="https://stackoverflow.com/questions/46155/how-can-i-validate-an-email-address-in-javascript ">Validation
+                        de formulaires
+                    </a>
+                    <li class="font-bold pb-2 pt-2">Source d'images et description des produits pour ce travail :
+                    </li>
+                    <p>J'ai utilisé des images et des descriptions de produits de Chilli Beans :
+                    </p>
+                    <a class="text-blue-700"
+                        href="https://loja.chillibeans.com.br/oculos-de-sol?PS=48&O=OrderByTopSaleDESC&gad_source=1&gclid=CjwKCAjwy8i0BhAkEiwAdFaeGI6R6tfhINQhUV5Sbu141YwS4kGUsFrtvjzaPGXJ04DsrUg6gb15RhoCr74QAvD_BwE">
+                        Chili Beans br</a>
+                    <li class="font-bold pb-2 pt-2">Configuration Vite pour deployment Vercel :
+                    </li>
+                    <p>J'ai rencontré des difficultés avec la configuration du fichier vite.config.js, mes fichiers html
+                        ne sont pas
+                        dans le même dossier que l'index.html, cela fait que la configuration doit être différente. En
+                        regardant le vidéo fourni.
+                        par le professeur et après plusieurs tentatives et erreurs, j'ai réussi à trouver une
+                        configuration adéquate.
+                        Il faut utiliser le path complété en débutant par ../.
+                    </p>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+    <footer class="sticky top-[100vh] bg-summer-light w-full flex flex-col md:flex-row justify-between p-7">
+        <div class="flex flex-col md:flex-row">
+            <div class="pb-4 md:p-4">
+                <h4 class="font-heading text-4xl text-summer-accentPlus cursor-pointer p-0 m-0 bg-ima">
+                    <a href="./index.html">Sol</a>
+                </h4>
+                <div class="w-full mt-4 md:mt-0">
+                    <p class="text-sm text-black flex">&copy; 2024 Sol.<br> Tous droits réservés.</p>
+                </div>
+            </div>
+            <div
+                class="py-4 border-b-[1px] border-b-black md:border-hidden mb-4 flex flex-col md:flex-row md:mx-5 md:gap-16">
+                <div class="md:hidden w-full flex flex-row justify-between">
+                    <span class="uppercase text-sm font-bold">Site Web</span>
+                    <button
+                        class="material-symbols-outlined text-black hover:text-summer-accent transition-transform transform rotate-0 expand-more"
+                        data-target="site-section">expand_more</button>
+                </div>
+                <nav class="footer-mobile hidden md:block self-start" id="site-section">
+                    <span class="uppercase text-sm font-bold hidden md:block">Site Web</span>
+                    <ul class="flex flex-col">
+                        <li class="text-black text-sm hover:text-summer-muted hover:font-bold cursor-pointer">
+                            <a href="/index.html">Home</a>
+                        </li>
+                        <li class="text-black text-sm hover:text-summer-muted hover:font-bold cursor-pointer">
+                            <a href="/assets/pages/_apropos.html">À propos</a>
+                        </li>
+                        <li class="text-black text-sm hover:text-summer-muted hover:font-bold cursor-pointer">
+                            <a href="/assets/pages/_products.html">Produits</a>
+                        </li>
+                        <li class="text-black text-sm hover:text-summer-muted hover:font-bold cursor-pointer">
+                            <a href="">Blogue</a>
+                        </li>
+                        <li class="text-black text-sm hover:text-summer-muted hover:font-bold cursor-pointer">
+                            <a href="/assets/pages/_contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="md:hidden w-full flex flex-row justify-between">
+                    <span class="uppercase text-sm font-bold">Nos politiques</span>
+                    <button
+                        class="md:hidden material-symbols-outlined text-black hover:text-summer-accent transition-transform transform rotate-0 expand-more"
+                        data-target="policy-section">expand_more</button>
+                </div>
+                <nav class="footer-mobile hidden md:block self-start" id="policy-section">
+                    <span class="uppercase text-sm font-bold hidden md:block">Nos politiques</span>
+                    <ul class="flex flex-col">
+                        <li class="text-black text-sm hover:text-summer-muted hover:font-bold cursor-pointer">
+                            <a href="">Politique de remboursement</a>
+                        </li>
+                        <li class="text-black text-sm hover:text-summer-muted hover:font-bold cursor-pointer">
+                            <a href="">Échange et retours</a>
+                        </li>
+                        <li class="text-black text-sm hover:text-summer-muted hover:font-bold cursor-pointer">
+                            <a href="">Conditions d'utilisation</a>
+                        </li>
+                        <li class="text-black text-sm hover:text-summer-muted hover:font-bold cursor-pointer">
+                            <a href="">Livraison</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="flex flex-col gap-5">
+            <div class="flex">
+                <a href="#" class="text-summer-muted hover:text-summer-accent">
+                    <img src="/assets/img/icons/icons8-facebook-24.svg" alt="Facebook" class="h-6 w-6 md:h-8 md:w-8" />
+                </a>
+                <a href="#" class="text-summer-muted hover:text-summer-accent">
+                    <img src="/assets/img/icons/icons8-instagram-24.svg" alt="Instagram"
+                        class="h-6 w-6 md:h-8 md:w-8" />
+                </a>
+                <a href="#" class="text-summer-muted hover:text-summer-accent">
+                    <img src="/assets/img/icons/icons8-tiktok-24.svg" alt="Tiktok" class="h-6 w-6 md:h-8 md:w-8" />
+                </a>
+                <a href="#" class="text-summer-muted hover:text-summer-accent">
+                    <img src="/assets/img/icons/icons8-linkedin-24.svg" alt="LinkedIn" class="h-6 w-6 md:h-8 md:w-8" />
+                </a>
+            </div>
+            <span class="uppercase text-sm font-bold">Inscrivez-vous à notre infolettre</span>
+            <form class="form-infolettre">
+                <div class=" flex items-center gap-x-2">
+                    <input type="email" placeholder="Votre adresse email"
+                        class="input-info text-sm w-full p-2 border-b-2 border-summer-accentPlus focus:border-black focus:outline-none focus:ring-0 bg-transparent" />
+                    <button class="btn-send-infolettre flex items-center justify-center">
+                        <span class="material-symbols-outlined">
+                            arrow_forward
+                        </span>
+                    </button>
+                </div>
+                <p class="email-infolettre-validation hidden text-red-500 text-xs italic">Champ obligatoire.</p>
+            </form>
+            <div class="flex flex-col">
+                <span class="uppercase text-sm font-bold">Service à la clientèle</span>
+                <span>581-xxx-6696</span>
+            </div>
+        </div>
+        <div
+            class="overlay-infolettre invisible fixed pin z-50 top-0 left-0 w-full h-full bg-black/50 flex justify-center items-center">
+            <div class="modal-infolettre relative">
+                <div class="modale flex flex-row relative w-full max-w-md h-full md:h-auto">
+                    <div class="modale-content flex flex-col bg-white gap-4 p-6 relative">
+                        <button
+                            class="btn-close-infolettre material-symbols-outlined absolute top-0 right-0 mt-2 mr-2">close</button>
+                        <div class="flex flex-col justify-center items-center">
+                            <span class="material-symbols-outlined text-green-500 text-7xl">check</span>
+                            <span class="message text-sm">Merci de vous être inscrit à notre infolettre! Vous recevrez
+                                bientôt nos dernières nouvelles et offres exclusives.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

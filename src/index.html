@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <script type="module" src="./assets/js/main.js" defer></script>
+  <script type="module" src="./assets/js/index.js" defer></script>
+  <link rel="icon" type="image/x-icon" href="./favicon.svg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sol | Lunettes de soleil</title>
+</head>
+
+<body class="w-full min-h-screen">
+  <header class="bg-summer-light">
+    <div class="flex flex-row items-center justify-center p-6">
+      <img class="w-auto h-20" src="./assets/img/logo/logo.png" alt="Logo Sol">
+      <h1 class="font-heading text-5xl text-summer-accentPlus cursor-pointer">
+        <a href="./index.html">Sol</a>
+      </h1>
+    </div>
+    <div class="w-auto flex justify-between items-center p-4 bg-white">
+      <span class="menu-mobile-btn material-symbols-outlined text-black cursor-pointer md:hidden">menu</span>
+      <div class="hidden md:block">
+        <div class="flex items-center p-4">
+          <span class="material-symbols-outlined text-black">location_on</span>
+          <form class="flex-1">
+            <input type="text" placeholder="Code postale"
+              class="input-search text-sm w-full p-2 border-b-2 border-summer-accentPlus focus:border-black focus:outline-none focus:ring-0 bg-transparent" />
+          </form>
+        </div>
+      </div>
+      <nav class="hidden md:flex">
+        <ul class="flex gap-x-12">
+          <li class="text-black hover:text-summer-muted hover:font-semibold cursor-pointer"><a
+              href="./index.html">Home</a></li>
+          <li class="text-black hover:text-summer-muted hover:font-semibold cursor-pointer"><a
+              href="./assets/pages/_apropos.html">À propos</a></li>
+          <li class="text-black hover:text-summer-muted hover:font-semibold cursor-pointer"><a
+              href="./assets/pages/_products.html">Produits</a></li>
+          <li class="text-black hover:text-summer-muted hover:font-semibold cursor-pointer"><a
+              href="./assets/pages/_contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="flex px-4">
+        <span
+          class="material-symbols-outlined text-black cursor-pointer transition-transform transform hover:scale-110">shopping_bag</span>
+      </div>
+      <div class="mobile-menu fixed bg-summer-light inset-y-0 left-0 w-full p-4 md:hidden hidden transition-transform transform -translate-x-full">
+        <div class="flex justify-between items-center mb-4">
+          <h2 class="font-heading text-3xl text-summer-accentPlus font-bold">menu</h2>
+          <span class="close-menu material-symbols-outlined text-4xl text-black cursor-pointer">close</span>
+        </div>
+        <nav class="block md:hidden">
+          <ul class="flex flex-col gap-4">
+            <li class="text-black hover:text-summer-muted hover:font-semibold cursor-pointer"><a
+                href="./index.html">Home</a></li>
+            <li class="text-black hover:text-summer-muted hover:font-semibold cursor-pointer"><a
+                href="./assets/pages/_apropos.html">À propos</a></li>
+            <li class="text-black hover:text-summer-muted hover:font-semibold cursor-pointer"><a
+                href="./assets/pages/_products.html">Produits</a></li>
+            <li class="text-black hover:text-summer-muted hover:font-semibold cursor-pointer"><a
+                href="./assets/pages/_contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="w-full banner">
+      <picture class="relative -z-50">
+        <source media="(min-width:1024px)"
+          srcset="./assets/img/banner/happy-bearded-africanamerican-man-showing-announcement-desktop.jpg">
+        <img src="./assets/img/banner/happy-bearded-africanamerican-man-showing-announcement-mobile.jpg"
+          alt="Homme avec des lunettes de soleil pointant vers la publicité" class="w-full">
+        <div
+          class="container mx-auto absolute inset-0 flex flex-col justify-end md:justify-center items-start p-3 md:p-6">
+          <p class="text-sm text-white font-bold md:font-normal md:text-xl md:text-black mb-3">Profitez des doubles
+            économies</p>
+          <h2 class="text-xl md:text-4xl font-bold text-summer-accent md:text-black p-0 ">-40% sur les paires de
+            lunettes <br>soleil selectionnés</h2>
+          <button href="#"
+            class="text-[1rem] lg:text-[1.2rem] hover:text-summer-accent hover:scale-105 text-white bg-black p-3 px-10 rounded-md mt-6">Boutique
+          </button>
+        </div>
+      </picture>
+    </section>
+    <section class="p-6 flex flex-col justify-center items-center">
+      <h3 class="text-xl font-semibold mb-2 text-black">Nos avantages</h3>
+      <div class="container mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="flex flex-col items-center p-4 bg-white shadow-lg">
+            <img class="h-12 w-12 mb-4" src="./assets/img/icons/fast-delivery_7621216.png" alt="Icone de livraison">
+            <h3 class="text-xl font-semibold mb-2">Livraison gratuite</h3>
+            <p class="text-center text-black">Profitez de la livraison gratuite sur toutes vos commandes sans minimum
+              d'achat.</p>
+          </div>
+          <div class="flex flex-col items-center p-4 bg-white shadow-lg">
+            <img class="h-12 w-12 mb-4" src="./assets/img/icons/return-box_9669338.png" alt="Icone de retours">
+            <h3 class="text-xl font-semibold mb-2">Retour facile</h3>
+            <p class="text-center text-black">Retournez vos articles facilement sous 30 jours pour un remboursement
+              complet.</p>
+          </div>
+          <div class="flex flex-col items-center p-4 bg-white shadow-lg">
+            <img class="h-12 w-12 mb-4" src="./assets/img/icons/quality_9669371.png" alt="Icone de qualité">
+            <h3 class="text-xl font-semibold mb-2">Qualité garantie</h3>
+            <p class="text-center text-black">Nos lunettes de soleil sont fabriquées avec des matériaux de haute
+              qualité.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="m-6 flex flex-col justify-center items-center">
+      <h3 class="text-xl font-semibold mb-2 text-black">Nos Meilleures Ventes</h3>
+      <div class="container flex flex-col justify-center items-center">
+        <div class="container-bestSeller grid grid-cols-2 items-stretch md:grid-cols-4 md:max-w-4xl gap-6">
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="sticky top-[100vh] bg-summer-light w-full flex flex-col md:flex-row justify-between p-7">
+      <div class="flex flex-col md:flex-row">
+        <div class="pb-4 md:p-4 ">
+          <h4 class="font-heading text-4xl text-summer-accentPlus cursor-pointer p-0 m-0">
+            <a href="./index.html">Sol</a>
+          </h4>
+          <div class="w-full mt-4 md:mt-0">
+            <p class="text-sm text-black flex">&copy; 2024 Sol.<br>Tous droits réservés.</p>
+          </div>
+        </div>
+        <div
+          class="py-4 border-b-[1px] border-b-black md:border-hidden mb-4 flex flex-col md:flex-row md:mx-5 md:gap-16">
+          <div class="md:hidden w-full flex flex-row justify-between">
+            <span class="uppercase text-sm font-bold">Site Web</span>
+            <button
+              class="material-symbols-outlined text-black hover:text-summer-accent transition-transform transform rotate-0 expand-more"
+              data-target="site-section">expand_more</button>
+          </div>
+          <nav class="footer-mobile hidden md:block self-start" id="site-section">
+            <span class="uppercase text-sm font-bold hidden md:block">Site Web</span>
+            <ul class="flex flex-col">
+              <li class="text-black text-sm hover:text-summer-muted hover:font-bold cursor-pointer">
+                <a href="./index.html">Home</a>
+              </li>
+              <li class="text-black text-sm hover:text-summer-muted hover:font-bold cursor-pointer">
+                <a href="./assets/pages/_apropos.html">À propos</a>
+              </li>
+              <li class="text-black text-sm hover:text-summer-muted hover:font-bold cursor-pointer">
+                <a href="./assets/pages/_products.html">Produits</a>
+              </li>
+              <li class="text-black text-sm hover:text-summer-muted hover:font-bold cursor-pointer">
+                <a href="">Blogue</a>
+              </li>
+              <li class="text-black text-sm hover:text-summer-muted hover:font-bold cursor-pointer">
+                <a href="./assets/pages/_contact.html">Contact</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="md:hidden w-full flex flex-row justify-between">
+            <span class="uppercase text-sm font-bold">Nos politiques</span>
+            <button
+              class="md:hidden material-symbols-outlined text-black hover:text-summer-accent transition-transform transform rotate-0 expand-more"
+              data-target="policy-section">expand_more</button>
+          </div>
+          <nav class="footer-mobile hidden md:block self-start" id="policy-section">
+            <span class="uppercase text-sm font-bold hidden md:block">Nos politiques</span>
+            <ul class="flex flex-col">
+              <li class="text-black text-sm hover:text-summer-muted hover:font-bold cursor-pointer">
+                <a href="">Politique de remboursement</a>
+              </li>
+              <li class="text-black text-sm hover:text-summer-muted hover:font-bold cursor-pointer">
+                <a href="">Échange et retours</a>
+              </li>
+              <li class="text-black text-sm hover:text-summer-muted hover:font-bold cursor-pointer">
+                <a href="">Conditions d'utilisation</a>
+              </li>
+              <li class="text-black text-sm hover:text-summer-muted hover:font-bold cursor-pointer">
+                <a href="">Livraison</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="flex flex-col gap-5">
+        <div class="flex">
+          <a href="#" class="text-summer-muted hover:text-summer-accent">
+            <img src="./assets/img/icons/icons8-facebook-24.svg" alt="Facebook" class="h-6 w-6 md:h-8 md:w-8" />
+          </a>
+          <a href="#" class="text-summer-muted hover:text-summer-accent">
+            <img src="./assets/img/icons/icons8-instagram-24.svg" alt="Instagram" class="h-6 w-6 md:h-8 md:w-8" />
+          </a>
+          <a href="#" class="text-summer-muted hover:text-summer-accent">
+            <img src="./assets/img/icons/icons8-tiktok-24.svg" alt="Tiktok" class="h-6 w-6 md:h-8 md:w-8" />
+          </a>
+          <a href="#" class="text-summer-muted hover:text-summer-accent">
+            <img src="./assets/img/icons/icons8-linkedin-24.svg" alt="LinkedIn" class="h-6 w-6 md:h-8 md:w-8" />
+          </a>
+        </div>
+        <span class="uppercase text-sm font-bold">Inscrivez-vous à notre infolettre</span>
+        <form class="form-infolettre">
+          <div class=" flex items-center gap-x-2">
+            <input type="email" placeholder="Votre adresse email"
+              class="input-info text-sm w-full p-2 border-b-2 border-summer-accentPlus focus:border-black focus:outline-none focus:ring-0 bg-transparent" />
+            <button class="btn-send-infolettre flex items-center justify-center">
+              <span class="material-symbols-outlined">
+                arrow_forward
+              </span>
+            </button>
+          </div>
+          <p class="email-infolettre-validation hidden text-red-500 text-xs italic">Champ obligatoire.</p>
+        </form>
+        <div class="flex flex-col">
+          <span class="uppercase text-sm font-bold">Service à la clientèle</span>
+          <span>581-xxx-6696</span>
+        </div>
+      </div>
+      <div
+        class="overlay-infolettre invisible fixed pin z-50 top-0 left-0 w-full h-full bg-black/50 flex justify-center items-center">
+        <div class="modal-infolettre relative">
+          <div class="modale flex flex-row relative w-full max-w-md h-full md:h-auto">
+            <div class="modale-content flex flex-col bg-white gap-4 p-6 relative">
+              <button
+                class="btn-close-infolettre material-symbols-outlined absolute top-0 right-0 mt-2 mr-2">close</button>
+              <div class="flex flex-col justify-center items-center">
+                <span class="material-symbols-outlined text-green-500 text-7xl">check</span>
+                <span class="message text-sm">Merci de vous être inscrit à notre infolettre! Vous recevrez bientôt nos
+                  dernières nouvelles et offres exclusives.
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

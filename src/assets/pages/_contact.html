@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script type="module" src="../js/main.js" defer></script>
+    <script type="module" src="../js/contact.js" defer></script>
+    <link rel="icon" type="image/x-icon" href="../img/logo/logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sol | Lunettes de soleil</title>
+</head>
+
+<body class="w-full min-h-screen">
+    <header class="bg-summer-light">
+        <div class="flex flex-row items-center justify-center p-6">
+            <img class="w-auto h-20" src="/assets/img/logo/logo.png" alt="Logo Sol">
+            <h1 class="font-heading text-5xl text-summer-accentPlus cursor-pointer">
+                <a href="/index.html">Sol</a>
+            </h1>
+        </div>
+        <div class="w-auto flex justify-between items-center p-4 bg-white">
+            <span class="menu-mobile-btn material-symbols-outlined text-black cursor-pointer md:hidden">menu</span>
+            <div class="hidden md:block">
+                <div class="flex items-center p-4">
+                    <span class="material-symbols-outlined text-black">location_on</span>
+                    <form class="flex-1">
+                        <input type="text" placeholder="Code postale"
+                            class="input-search text-sm w-full p-2 border-b-2 border-summer-accentPlus focus:border-black focus:outline-none focus:ring-0 bg-transparent" />
+                    </form>
+                </div>
+            </div>
+            <nav class="hidden md:flex">
+                <ul class="flex gap-x-12">
+                    <li class="text-black hover:text-summer-muted hover:font-semibold cursor-pointer"><a
+                            href="/index.html">Home</a></li>
+                    <li class="text-black hover:text-summer-muted hover:font-semibold cursor-pointer"><a
+                            href="/assets/pages/_apropos.html">À propos</a></li>
+                    <li class="text-black hover:text-summer-muted hover:font-semibold cursor-pointer"><a
+                            href="/assets/pages/_products.html">Produits</a></li>
+                    <li class="text-black hover:text-summer-muted hover:font-semibold cursor-pointer"><a
+                            href="/assets/pages/_contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="flex px-4">
+                <span
+                    class="material-symbols-outlined text-black cursor-pointer transition-transform transform hover:scale-110">shopping_bag</span>
+            </div>
+            <div
+                class="mobile-menu fixed bg-summer-light inset-y-0 left-0 w-full p-4 md:hidden hidden transition-transform transform -translate-x-full">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="font-heading text-3xl text-summer-accentPlus font-bold">menu</h2>
+                    <span class="close-menu material-symbols-outlined text-4xl text-black cursor-pointer">close</span>
+                </div>
+                <nav class="block md:hidden">
+                    <ul class="flex flex-col gap-4">
+                        <li class="text-black hover:text-summer-muted hover:font-semibold cursor-pointer"><a
+                                href="/index.html">Home</a></li>
+                        <li class="text-black hover:text-summer-muted hover:font-semibold cursor-pointer"><a
+                                href="/assets/pages/_apropos.html">À propos</a></li>
+                        <li class="text-black hover:text-summer-muted hover:font-semibold cursor-pointer"><a
+                                href="/assets/pages/_products.html">Produits</a></li>
+                        <li class="text-black hover:text-summer-muted hover:font-semibold cursor-pointer"><a
+                                href="/assets/pages/_contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="w-full flex flex-col items-center justify-center p-6">
+            <h3 class="text-xl font-semibold mb-2 text-black">Comment pouvons-nous vous aider?</h3>
+            <form class="w-full max-w-lg p-6" id="contact-form">
+                <div class="flex flex-wrap -mx-3 mb-6">
+                    <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                        <label class="block uppercase tracking-wide text-black text-xs font-bold mb-2"
+                            for="grid-first-name">
+                            Prénom
+                        </label>
+                        <input
+                            class="input-name text-sm w-full p-2 border-b-2 border-summer-accentPlus focus:border-black focus:outline-none focus:ring-0"
+                            id="grid-first-name" type="text" placeholder="Prénom">
+                    </div>
+                    <div class="w-full md:w-1/2 px-3">
+                        <label class="block uppercase tracking-wide text-black text-xs font-bold mb-2"
+                            for="grid-last-name">
+                            Nom de famille
+                        </label>
+                        <input
+                            class="input-lastName text-sm w-full p-2 border-b-2 border-summer-accentPlus focus:border-black focus:outline-none focus:ring-0"
+                            id="grid-last-name" type="text" placeholder="Nom de famille">
+                    </div>
+                </div>
+                <div class="flex flex-wrap -mx-3 mb-6">
+                    <div class="w-full px-3">
+                        <label class="block uppercase tracking-widetext-black text-xs font-bold mb-2" for="grid-email">
+                            Courriel
+                        </label>
+                        <input
+                            class="input-email text-sm w-full p-2 border-b-2 border-summer-accentPlus focus:border-black focus:outline-none focus:ring-0"
+                            id="grid-email" type="text" placeholder="abc@hotmail.com">
+                        <p class="email-validation hidden text-red-500 text-xs italic">Champ obligatoire.</p>
+                    </div>
+                </div>
+                <div class="flex flex-wrap -mx-3 mb-2">
+                    <div class="w-full px-3 mb-6 md:mb-0">
+                        <label class="block uppercase tracking-wide text-black text-xs font-bold mb-2" for="grid-sujet">
+                            Sujet
+                        </label>
+                        <input
+                            class="input-sujet text-sm w-full p-2 border-b-2 border-summer-accentPlus focus:border-black focus:outline-none focus:ring-0"
+                            id="grid-sujet" type="text" placeholder="Livraison">
+                    </div>
+                </div>
+                <div class="flex flex-wrap -mx-3 m-6">
+                    <div class="w-full px-3">
+                        <label class="block uppercase tracking-wide text-black text-xs font-bold mb-2"
+                            for="grid-description">
+                            Message
+                        </label>
+                        <textarea
+                            class="input-description text-sm w-full p-2 border-b-2 border-summer-accentPlus focus:border-black focus:outline-none focus:ring-0"
+                            id="grid-description" placeholder="Rédigez votre message ici" rows="4"></textarea>
+                    </div>
+                </div>
+                <div class="w-full flex justify-end pb-6">
+                    <button type="submit" class="text-xs text-white bg-black p-3 px-auto rounded-md">
+                        Soumettre
+                    </button>
+                </div>
+            </form>
+            <div
+                class="overlay invisible fixed pin z-50 top-0 left-0 w-full h-full bg-black/50 flex justify-center items-center">
+                <div class="modal-form relative">
+                    <div class="modale flex flex-row relative w-full max-w-md h-full md:h-auto">
+                        <div class="modale-content flex flex-col bg-white gap-4 p-6 relative">
+                            <button
+                                class="btn-close material-symbols-outlined absolute top-0 right-0 mt-2 mr-2">close</button>
+                            <div class="flex flex-col justify-center items-center">
+                                <span class="material-symbols-outlined text-green-500 text-7xl">check</span>
+                                <span class="message text-sm">Votre formulaire a été soumis avec succès. Nous vous
+                                    contacterons sous peu.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+    <footer class="sticky top-[100vh] bg-summer-light w-full flex flex-col md:flex-row justify-between p-7">
+        <div class="flex flex-col md:flex-row">
+            <div class="pb-4 md:p-4">
+                <h4 class="font-heading text-4xl text-summer-accentPlus cursor-pointer p-0 m-0 bg-ima">
+                    <a href="./index.html">Sol</a>
+                </h4>
+                <div class="w-full mt-4 md:mt-0">
+                    <p class="text-sm text-black flex">&copy; 2024 Sol.<br> Tous droits réservés.</p>
+                </div>
+            </div>
+            <div
+                class="py-4 border-b-[1px] border-b-black md:border-hidden mb-4 flex flex-col md:flex-row md:mx-5 md:gap-16">
+                <div class="md:hidden w-full flex flex-row justify-between">
+                    <span class="uppercase text-sm font-bold">Site Web</span>
+                    <button
+                        class="material-symbols-outlined text-black hover:text-summer-accent transition-transform transform rotate-0 expand-more"
+                        data-target="site-section">expand_more</button>
+                </div>
+                <nav class="footer-mobile hidden md:block self-start" id="site-section">
+                    <span class="uppercase text-sm font-bold hidden md:block">Site Web</span>
+                    <ul class="flex flex-col">
+                        <li class="text-black text-sm hover:text-summer-muted hover:font-bold cursor-pointer">
+                            <a href="/index.html">Home</a>
+                        </li>
+                        <li class="text-black text-sm hover:text-summer-muted hover:font-bold cursor-pointer">
+                            <a href="/assets/pages/_apropos.html">À propos</a>
+                        </li>
+                        <li class="text-black text-sm hover:text-summer-muted hover:font-bold cursor-pointer">
+                            <a href="/assets/pages/_products.html">Produits</a>
+                        </li>
+                        <li class="text-black text-sm hover:text-summer-muted hover:font-bold cursor-pointer">
+                            <a href="">Blogue</a>
+                        </li>
+                        <li class="text-black text-sm hover:text-summer-muted hover:font-bold cursor-pointer">
+                            <a href="/assets/pages/_contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="md:hidden w-full flex flex-row justify-between">
+                    <span class="uppercase text-sm font-bold">Nos politiques</span>
+                    <button
+                        class="md:hidden material-symbols-outlined text-black hover:text-summer-accent transition-transform transform rotate-0 expand-more"
+                        data-target="policy-section">expand_more</button>
+                </div>
+                <nav class="footer-mobile hidden md:block self-start" id="policy-section">
+                    <span class="uppercase text-sm font-bold hidden md:block">Nos politiques</span>
+                    <ul class="flex flex-col">
+                        <li class="text-black text-sm hover:text-summer-muted hover:font-bold cursor-pointer">
+                            <a href="">Politique de remboursement</a>
+                        </li>
+                        <li class="text-black text-sm hover:text-summer-muted hover:font-bold cursor-pointer">
+                            <a href="">Échange et retours</a>
+                        </li>
+                        <li class="text-black text-sm hover:text-summer-muted hover:font-bold cursor-pointer">
+                            <a href="">Conditions d'utilisation</a>
+                        </li>
+                        <li class="text-black text-sm hover:text-summer-muted hover:font-bold cursor-pointer">
+                            <a href="">Livraison</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="flex flex-col gap-5">
+            <div class="flex">
+                <a href="#" class="text-summer-muted hover:text-summer-accent">
+                    <img src="/assets/img/icons/icons8-facebook-24.svg" alt="Facebook" class="h-6 w-6 md:h-8 md:w-8" />
+                </a>
+                <a href="#" class="text-summer-muted hover:text-summer-accent">
+                    <img src="/assets/img/icons/icons8-instagram-24.svg" alt="Instagram"
+                        class="h-6 w-6 md:h-8 md:w-8" />
+                </a>
+                <a href="#" class="text-summer-muted hover:text-summer-accent">
+                    <img src="/assets/img/icons/icons8-tiktok-24.svg" alt="Tiktok" class="h-6 w-6 md:h-8 md:w-8" />
+                </a>
+                <a href="#" class="text-summer-muted hover:text-summer-accent">
+                    <img src="/assets/img/icons/icons8-linkedin-24.svg" alt="LinkedIn" class="h-6 w-6 md:h-8 md:w-8" />
+                </a>
+            </div>
+            <span class="uppercase text-sm font-bold">Inscrivez-vous à notre infolettre</span>
+            <form class="form-infolettre">
+                <div class=" flex items-center gap-x-2">
+                    <input type="email" placeholder="Votre adresse email"
+                        class="input-info text-sm w-full p-2 border-b-2 border-summer-accentPlus focus:border-black focus:outline-none focus:ring-0 bg-transparent" />
+                    <button class="btn-send-infolettre flex items-center justify-center">
+                        <span class="material-symbols-outlined">
+                            arrow_forward
+                        </span>
+                    </button>
+                </div>
+                <p class="email-infolettre-validation hidden text-red-500 text-xs italic">Champ obligatoire.</p>
+            </form>
+            <div class="flex flex-col">
+                <span class="uppercase text-sm font-bold">Service à la clientèle</span>
+                <span>581-xxx-6696</span>
+            </div>
+        </div>
+        <div
+            class="overlay-infolettre invisible fixed pin z-50 top-0 left-0 w-full h-full bg-black/50 flex justify-center items-center">
+            <div class="modal-infolettre relative">
+                <div class="modale flex flex-row relative w-full max-w-md h-full md:h-auto">
+                    <div class="modale-content flex flex-col bg-white gap-4 p-6 relative">
+                        <button
+                            class="btn-close-infolettre material-symbols-outlined absolute top-0 right-0 mt-2 mr-2">close</button>
+                        <div class="flex flex-col justify-center items-center">
+                            <span class="material-symbols-outlined text-green-500 text-7xl">check</span>
+                            <span class="message text-sm">Merci de vous être inscrit à notre infolettre! Vous recevrez
+                                bientôt nos dernières nouvelles et offres exclusives.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
